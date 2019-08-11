@@ -16,6 +16,7 @@ function longestWord(sen) {
     console.log(sen)
       let senArr = sen.split(' ')
        console.log(senArr)
+       sen.replace(/&!!/i,' ')
        let placeholder = senArr[0]
        for (let i = 0; i < senArr.length; i++) {
          console.log(i + ' - ' + senArr[i])
