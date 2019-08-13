@@ -11,7 +11,12 @@
 */
 
 function isEven(n) {
-
+if ((n &1) == 0) {
+    return true
+} else {
+    return false
 }
+}
+isEven()
 
 module.exports = isEven;
