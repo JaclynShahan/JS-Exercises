@@ -13,7 +13,18 @@
  */
 
 function anagrams(stringA, stringB) {
-
-}
-
+    let splitStringA = stringA.split("")
+    console.log(splitStringA)
+    let splitStringB = stringB.split("")
+    console.log(splitStringB)
+    for(let i = 0; i < splitStringA.length; i++ ) {
+     // console.log(splitStringA[0])
+      if (!splitStringB.includes(splitStringA[i])) {
+        return false
+      }
+    }
+    return true
+    }
+   
+  
 module.exports = anagrams;
