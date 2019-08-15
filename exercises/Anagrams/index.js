@@ -13,9 +13,9 @@
  */
 
 function anagrams(stringA, stringB) {
-    let splitStringA = stringA.split("")
+    let splitStringA = stringA.replace(/[^\w]/g, '').toLowerCase().split("")
     console.log(splitStringA)
-    let splitStringB = stringB.split("")
+    let splitStringB = stringB.replace(/[^\w]/g, '').toLowerCase().split("")
     console.log(splitStringB)
     for(let i = 0; i < splitStringA.length; i++ ) {
      // console.log(splitStringA[0])
