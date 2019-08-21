@@ -10,6 +10,13 @@
  */
 
 function maxChar(str) {
+let splitStr = str.split("")
+let count = {}
+let biggestChar = ""
+let strValue = 0
+for (let i = 0; i < splitStr.length; i ++) {
+let char = splitStr.charAt(i)
+}
 
 }
 
