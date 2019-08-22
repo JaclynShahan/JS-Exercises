@@ -10,13 +10,24 @@
  */
 
 function maxChar(str) {
-let splitStr = str.split("")
+//let splitStr = str.split("")
 let count = {}
 let biggestChar = ""
 let strValue = 0
-for (let i = 0; i < splitStr.length; i ++) {
-let char = splitStr.charAt(i)
+for (let char of str) {
+if(count[char]) {
+    count[char]++
+} else {
+    count[char] = 1
 }
+}
+for (let char in count) {
+    if(count[char] > strValue) {
+        strValue = count[char]
+        biggestChar = char
+    }
+}
+return biggestChar
 
 }
 
