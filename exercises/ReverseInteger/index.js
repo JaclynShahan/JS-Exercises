@@ -13,7 +13,9 @@
  */
 
 function reverse(int) {
-
+    let newArr = int.toString().split("").reverse().join("")
+    console.log(newArr)
+    return parseInt(newArr) * Math.sign(int)
 }
 
 module.exports = reverse;
