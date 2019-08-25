@@ -12,7 +12,21 @@
  */
 
 function capitalize(str) {
-return str.charAt(0).toUpperCase() + str.slice(1)
+let strArr = [];
+
+str.split(' ').forEach(word => {
+    strArr.push(word[0].toUpperCase() + word.slice(1))
+})
+return strArr.join(' ')
 }
+// for(let i = 1; i < str.length; i++) {
+//     if(str[i - 1] === '') {
+//         newWord += str[i].toUpperCase()
+//     } else {
+//         newWord += str[i]
+//     }
+// }
+// return newWord
+// }
 
 module.exports = capitalize;
