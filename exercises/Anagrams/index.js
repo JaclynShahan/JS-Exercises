@@ -13,18 +13,11 @@
  */
 
 function anagrams(stringA, stringB) {
-    let splitStringA = stringA.replace(/[^\w]/g, '').toLowerCase().split("")
+    let splitStringA = stringA.toLowerCase().split("").sort().filter(char => char.match(/[a-zA-z]/)).join("");
     console.log(splitStringA)
-    let splitStringB = stringB.replace(/[^\w]/g, '').toLowerCase().split("")
+    let splitStringB = stringB.toLowerCase().split("").sort().filter(char => char.match(/[a-zA-z]/)).join("");
     console.log(splitStringB)
-    for(let i = 0; i < splitStringA.length; i++ ) {
-     // console.log(splitStringA[0])
-      if (!splitStringB.includes(splitStringA[i])) {
-        return false
-      }
-    }
-    return true
-    }
+return splitStringA === splitStringB;
    
-  
+}
 module.exports = anagrams;
