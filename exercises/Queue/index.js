@@ -13,7 +13,19 @@
  */
 
 class Queue {
+constructor () {
+    this.queue = [];
+}
+add = (i) => {
+ this.queue.unshift(i)
+}
+remove = () => {
+return this.queue.pop()
+}
 
+peek = () => {
+    return this.queue[queue.length - 1];
+}
 }
 
 module.exports = Queue;
