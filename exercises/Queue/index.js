@@ -16,14 +16,14 @@ class Queue {
 constructor () {
     this.queue = [];
 }
-add = (i) => {
- this.queue.unshift(i)
+add (item) {
+ this.queue.unshift(item)
 }
-remove = () => {
+remove() {
 return this.queue.pop()
 }
 
-peek = () => {
+peek() {
     return this.queue[queue.length - 1];
 }
 }
