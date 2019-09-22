@@ -20,7 +20,19 @@
  */
 
 function steps(n) {
-
-}
+    let word;
+    for (let i = 1; i <= n; i++) {
+        word = '';
+        for (let x = 1; x <= n; x++) {
+          if (x <= i) {
+            word = word + '#'
+          } else {
+            word = word + ' '
+          }
+        }
+    
+        console.log(word);
+      }
+    }
 
 module.exports = steps;
