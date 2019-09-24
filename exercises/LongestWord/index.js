@@ -13,20 +13,22 @@
 */
 
 function longestWord(sen) {
-    console.log(sen)
-      let senArr = sen.split(' ')
-       console.log(senArr)
-       sen.replace(/&!!/i,' ')
-       let placeholder = senArr[0]
-       for (let i = 0; i < senArr.length; i++) {
-         console.log(i + ' - ' + senArr[i])
-         if(senArr[i].length > placeholder.length) {
-           placeholder = senArr[i]
+   // console.log(sen)
+    let max = 0
+      let senArr = []
+       //console.log(senArr)
+       let arr = sen.match(/[a-z0-9]+/gi);
+       //let placeholder = senArr[0]
+       for (let i = 0; i < arr.length; i++) {
+         //console.log(i + ' - ' + senArr[i])
+         if(arr[i].length > max) {
+           max = arr[i].length
+           senArr.unshift(arr[i])
          } 
   
        }
-       console.log(placeholder)
-       return placeholder
+      
+       return senArr[0];
   
   }
 
